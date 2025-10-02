@@ -1,8 +1,9 @@
 import { Component, signal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-nowy',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './nowy.component.html',
   styleUrl: './nowy.component.less'
 })

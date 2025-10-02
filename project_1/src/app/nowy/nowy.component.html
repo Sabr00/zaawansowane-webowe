@@ -1,2 +1,8 @@
-<input type="button" value="click me" (click)="showMessage()">
-<input type="button" title="nauka" value="{{ title() }}" (click)="changeTitle()">
+
+<section> 
+    <input type="button" value="click me" (click)="showMessage()">
+    <br>
+    <input type="button" title="nauka" value="{{ title() }}" (click)="changeTitle()">
+</section>
+
+<input id="title" type="text" [value]="title" [(ngModel)] ="title" />

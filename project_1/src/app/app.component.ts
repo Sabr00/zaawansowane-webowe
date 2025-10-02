@@ -5,7 +5,6 @@ import { NowyComponent } from './nowy/nowy.component';
 @Component({
   selector: 'app-root',
   imports: [NowyComponent],
-  // templateUrl: './app.component.html',
   styleUrl: './app.component.less',
   template: '<main> <app-nowy /> </main> ',
 })
