@@ -1,0 +1,33 @@
+<div *ngIf="szkola">
+	<h2>{{ szkola.getId() }}: {{ szkola.getNazwa() }} w {{ szkola.getAdresOdwrocony() }}</h2>
+	<hr />
+	aktywnyModul: {{ szkola.aktywnyModul }}
+	<br /><br />
+	<div *ngIf="szkola.aktywnyModul == 'szkola'">
+		szkola szczegoly
+		<p>Dyrektor: #{{ szkola.getDyrektor().getId() }} {{ szkola.getDyrektor().getImie() }} {{ szkola.getDyrektor().getNazwisko() }}</p>
+		<p>Liczba nauczycieli: {{ szkola.getNauczyciele().length }}</p>
+		<p>Liczba przedmiotów: {{ szkola.getPrzedmioty().length }}</p>
+		<p>Liczba klas: {{ szkola.getKlasy().length }}</p>
+		<p>Liczba sal: {{ szkola.getSale().length }}</p>
+		<p>Liczba uczniów: {{ szkola.getUczniowie().length }}</p>
+	</div>
+	<div *ngIf="szkola.aktywnyModul == 'nauczyciele'">
+		<nauczyciele-lista [szkola]="szkola" />
+	</div>
+	<div *ngIf="szkola.aktywnyModul == 'przedmioty'">
+		<przedmioty-lista [szkola]="szkola" />
+	</div>
+	<div *ngIf="szkola.aktywnyModul == 'klasy'">
+		<klasy-lista [szkola]="szkola" />
+	</div>
+	<div *ngIf="szkola.aktywnyModul == 'sale'">
+		<sale-lista [szkola]="szkola" />
+	</div>
+	<div *ngIf="szkola.aktywnyModul == 'uczniowie'">
+		<uczniowie-lista [szkola]="szkola" />
+	</div>
+</div>
+<div *ngIf="!szkola">
+	<p>Wybierz szkołę z listy.</p>
+</div>

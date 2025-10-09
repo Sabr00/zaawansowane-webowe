@@ -1,0 +1,16 @@
+<div>
+	<h2>Lista szkół - {{ szkoly.length }}</h2>
+	<ul>
+		<li *ngFor="let szkola of szkoly" (mouseover)="rozwinSzkole(szkola)" (mouseout)="zwinSzkole(szkola)" style="cursor:pointer">
+			<span (click)="pokazSzkole(szkola)">{{ szkola.getId() }}. {{ szkola.getNazwa() }}, {{ szkola.getAdres() }}</span><br />
+			<ul *ngIf="szkola.showDetails">
+				<li (click)="pokazNauczycieli(szkola)" style="cursor:pointer">Nauczyciele</li>
+				<li (click)="pokazPrzedmioty(szkola)" style="cursor:pointer">Przedmioty</li>
+				<li (click)="pokazKlasy(szkola)" style="cursor:pointer">Klasy</li>
+				<li (click)="pokazSale(szkola)" style="cursor:pointer">Sale</li>
+				<li (click)="pokazUczniow(szkola)" style="cursor:pointer">Uczniowie</li>
+			</ul>
+		</li>
+	</ul>
+	<button (click)="dodajSzkole()">Dodaj szkołę</button>
+</div>

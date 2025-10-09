@@ -5,4 +5,4 @@
     <input type="button" title="nauka" value="{{ title() }}" (click)="changeTitle()">
 </section>
 
-<input id="title" type="text" [value]="title" [(ngModel)] ="title" />
+<input id="title" type="text" [value]="title()" [(ngModel)] ="title" />
