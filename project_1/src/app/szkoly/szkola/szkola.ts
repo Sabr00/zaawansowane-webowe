@@ -82,6 +82,9 @@ export class Szkola {
 		this.klasy.push(new Klasa(id, nazwa, profil, wychowawca));
 		return id;
 	}
+	getKlase(id: number): Klasa {
+		return this.klasy.find((klasa) => klasa.getId() === id)!;
+	}
 	getKlasy(): Klasa[] {
 		return this.klasy;
 	}

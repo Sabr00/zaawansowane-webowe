@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { SzkolyModule } from './szkoly/szkoly.module';
+import  SzkolyModule  from './szkoly/szkoly-module';
 import { ListaComponent as ListaSzkol } from './szkoly/szkola/lista/lista.component';
 import { SzczegolyComponent as SzczegolySzkoly } from './szkoly/szkola/szczegoly/szczegoly.component';
 import { PROFIL_KLASY } from './szkoly/klasa/klasa';

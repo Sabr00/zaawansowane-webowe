@@ -1,0 +1,6 @@
+<div *ngIf="klasa.getUczniow().length">
+	<p>lista uczniów</p>
+	<ul *ngFor="let uczen of klasa.getUczniow()">
+		<li>id ucznia: {{ uczen }}</li>
+	</ul>
+</div>

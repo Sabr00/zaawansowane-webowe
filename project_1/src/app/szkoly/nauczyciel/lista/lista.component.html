@@ -1,1 +1,12 @@
-<p>lista works!</p>
+<h3> Nauczyciele </h3>
+<ul>
+    <li *ngFor="let nauczyciel of szkola.getNauczyciele()">
+        <div>
+            <span (click)="toggleSzczegolyNauczycieli(nauczyciel)" style="cursor:pointer"> {{ nauczyciel.getId() }} - {{ nauczyciel.getImie() }} - {{ nauczyciel.getNazwisko() }} </span>
+            <div *ngIf="nauczyciel.showDetails">
+                <nauczyciel-szczegoly [nauczyciel]="nauczyciel"/>
+            </div>
+            <br /> <br />
+        </div>
+    </li>
+</ul>

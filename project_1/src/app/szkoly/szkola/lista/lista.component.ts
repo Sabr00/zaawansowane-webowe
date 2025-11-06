@@ -1,6 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import SzkolaModule from '../../szkoly.module';
+import  SzkolaModule  from '../../szkoly-module';
 
 @Component({
 	selector: 'szkoly-lista',

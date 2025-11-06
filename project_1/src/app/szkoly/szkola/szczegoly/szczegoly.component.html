@@ -15,18 +15,19 @@
 	<div *ngIf="szkola.aktywnyModul == 'nauczyciele'">
 		<nauczyciele-lista [szkola]="szkola" />
 	</div>
+	<!--
 	<div *ngIf="szkola.aktywnyModul == 'przedmioty'">
 		<przedmioty-lista [szkola]="szkola" />
-	</div>
+	</div> -->
 	<div *ngIf="szkola.aktywnyModul == 'klasy'">
 		<klasy-lista [szkola]="szkola" />
 	</div>
-	<div *ngIf="szkola.aktywnyModul == 'sale'">
+	<!-- <div *ngIf="szkola.aktywnyModul == 'sale'">
 		<sale-lista [szkola]="szkola" />
 	</div>
 	<div *ngIf="szkola.aktywnyModul == 'uczniowie'">
 		<uczniowie-lista [szkola]="szkola" />
-	</div>
+	</div> -->
 </div>
 <div *ngIf="!szkola">
 	<p>Wybierz szkołę z listy.</p>

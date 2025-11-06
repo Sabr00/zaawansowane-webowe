@@ -1,1 +1,12 @@
-<p>lista works!</p>
+<h3>Klasy:</h3>
+<ul>
+	<li *ngFor="let klasa of szkola.getKlasy()">
+		<div>
+			<span (click)="toggleSzczegolyKlasy(klasa)" style="cursor:pointer">{{ klasa.getId() }}: {{ klasa.getNazwa() }} - {{ klasa.getProfil() }}</span>
+			<div *ngIf="klasa.showDetails">
+				<klasa-szczegoly [klasa]="klasa" />
+			</div>
+			<br /><br />
+		</div>
+	</li>
+</ul>
